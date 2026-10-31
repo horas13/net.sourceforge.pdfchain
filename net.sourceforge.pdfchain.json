@@ -1,7 +1,7 @@
 {
     "app-id": "net.sourceforge.pdfchain",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "pdfchain",
     "rename-desktop-file": "pdfchain.desktop",
@@ -54,7 +54,8 @@
               {
                 "type": "git",
                 "url": "https://github.com/tamirzb/xgetres",
-                "tag": "1.0"
+                "tag": "1.0",
+                "commit": "7dd6aa2e3a469382ba09152710a5bb4abb3fbc9c"
               }
             ]
         },

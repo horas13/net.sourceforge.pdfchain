@@ -25,33 +25,17 @@
     ],
     "modules": [
         {
-            "name": "mm-common",
-            "sources": [
-                {
-                    "sha256": "b55c46037dbcdabc5cee3b389ea11cc3910adb68ebe883e9477847aa660862e7",
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.6.tar.xz"
-                }
-            ],
-            "cleanup": [
-                "/share/aclocal",
-                "/share/pkgconfig",
-                "/share/mm-common",
-                "/share/doc",
-                "/bin/mm-common*"
-            ]
-        },
-        {
             "name": "sigc++",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbuild-documentation=false"
+            ],
             "sources": [
                 {
                     "sha256": "235a40bec7346c7b82b6a8caae0456353dc06e71f14bc414bcc858af1838719a",
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.8.tar.xz"
                 }
-            ],
-            "config-opts": [
-                "--disable-documentation"
             ],
             "cleanup": [
                 "*.la",
@@ -86,15 +70,16 @@
         },
         {
             "name": "cairomm",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbuild-documentation=false"
+            ],
             "sources": [
                 {
                     "sha256": "70136203540c884e89ce1c9edfb6369b9953937f6cd596d97c78c9758a5d48db",
                     "type": "archive",
                     "url": "https://www.cairographics.org/releases/cairomm-1.14.5.tar.xz"
                 }
-            ],
-            "config-opts": [
-                "--disable-documentation"
             ],
             "cleanup": [
                 "*.la",
